@@ -1,0 +1,140 @@
+/* Market Prices Section */
+.marketPrices {
+  padding: 4rem 0;
+  background: white;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.sectionHeader {
+  text-align: center;
+  margin-bottom: 3rem;
+  position: relative;
+}
+
+.sectionHeader h2 {
+  font-size: 2.25rem;
+  margin-bottom: 1rem;
+  color: #2d3748;
+}
+
+.sectionHeader p {
+  font-size: 1.125rem;
+  color: #4a5568;
+  margin-bottom: 1.5rem;
+}
+
+.refreshBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: linear-gradient(135deg, #a8d8a8 0%, #7fb069 100%);
+  color: white;
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.refreshBtn:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(168, 216, 168, 0.3);
+}
+
+.refreshBtn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.spinning {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.pricesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.priceCard {
+  background: #f8f9fa;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 1px 3px rgba(168, 216, 168, 0.12);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: all 0.3s ease;
+}
+
+.priceCard:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 6px rgba(168, 216, 168, 0.15);
+}
+
+.priceInfo h4 {
+  color: #2d3748;
+  margin-bottom: 0.5rem;
+  font-size: 1.125rem;
+}
+
+.price {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #a8d8a8;
+}
+
+.priceTrend {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 1.2rem;
+}
+
+.trendUp {
+  background: #48bb78;
+}
+
+.trendDown {
+  background: #f56565;
+}
+
+.trendStable {
+  background: #ed8936;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .pricesGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .sectionHeader h2 {
+    font-size: 1.75rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .priceCard {
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+  }
+}

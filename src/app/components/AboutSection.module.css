@@ -1,0 +1,164 @@
+/* About Section */
+.about {
+  padding: 4rem 0;
+  background: white;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.aboutContent {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+.sectionBadge {
+  display: inline-block;
+  padding: 0.5rem 1.5rem;
+  background: linear-gradient(135deg, #f4e4bc 0%, #e8c5a0 100%);
+  color: #2d3748;
+  border-radius: 1.5rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+}
+
+.aboutText h2 {
+  font-size: 2.25rem;
+  margin-bottom: 1.5rem;
+  color: #2d3748;
+  line-height: 1.2;
+}
+
+.aboutText > p {
+  font-size: 1.125rem;
+  margin-bottom: 2rem;
+  color: #4a5568;
+  line-height: 1.6;
+}
+
+.features {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.feature {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5rem;
+}
+
+.feature i {
+  width: 40px;
+  height: 40px;
+  background: linear-gradient(135deg, #f4e4bc 0%, #e8c5a0 100%);
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #7fb069;
+  font-size: 1.2rem;
+  flex-shrink: 0;
+}
+
+.feature div {
+  flex: 1;
+}
+
+.feature h4 {
+  margin-bottom: 0.25rem;
+  color: #2d3748;
+  font-size: 1.125rem;
+  font-weight: 600;
+}
+
+.feature p {
+  color: #718096;
+  margin: 0;
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+.aboutImage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.imagePlaceholder {
+  width: 400px;
+  height: 300px;
+  background: linear-gradient(
+    135deg,
+    rgba(168, 216, 168, 0.1) 0%,
+    rgba(127, 176, 105, 0.1) 100%
+  );
+  border-radius: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #a8d8a8;
+  box-shadow: 0 10px 25px rgba(168, 216, 168, 0.2);
+}
+
+.imagePlaceholder i {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+}
+
+.imagePlaceholder p {
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin: 0;
+  color: #2d3748;
+}
+
+/* Responsividade */
+@media (max-width: 1024px) {
+  .aboutContent {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .aboutText h2 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .aboutText h2 {
+    font-size: 1.75rem;
+  }
+
+  .imagePlaceholder {
+    width: 100%;
+    max-width: 350px;
+    height: 250px;
+  }
+}
+
+@media (max-width: 480px) {
+  .feature {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .feature i {
+    align-self: center;
+  }
+
+  .imagePlaceholder {
+    height: 200px;
+  }
+
+  .imagePlaceholder i {
+    font-size: 3rem;
+  }
+}

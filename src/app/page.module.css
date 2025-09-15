@@ -1,0 +1,292 @@
+.container {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.container header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.container h1 {
+  color: #1e40af;
+  margin-bottom: 5px;
+}
+
+.container p {
+  color: #555;
+}
+
+.controls {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: flex-start;
+  margin-bottom: 25px;
+}
+
+.controls label {
+  font-weight: 600;
+  color: #1a202c;
+}
+
+.controls select {
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  background-color: #f9fafb;
+  width: 100%;
+  max-width: 300px;
+  font-size: 16px;
+}
+
+.controls button {
+  padding: 12px 25px;
+  border: none;
+  border-radius: 6px;
+  background-color: #3b82f6;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.controls button:hover {
+  background-color: #2563eb;
+}
+
+.controls button:disabled {
+  background-color: #9ca3af;
+  cursor: not-allowed;
+}
+
+.item {
+  background-color: #f9fafb;
+  border: 1px solid #e2e8f0;
+  padding: 15px;
+  border-radius: 6px;
+  margin-bottom: 15px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+.item h3 {
+  color: #1e40af;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.item p {
+  margin: 5px 0;
+  line-height: 1.5;
+}
+
+.item p strong {
+  color: #4b5563;
+}
+
+.item ul {
+  padding-left: 20px;
+  margin-top: 5px;
+}
+
+.item ul li {
+  margin-bottom: 2px;
+}
+
+.linkCultura {
+  color: #3b82f6;
+  text-decoration: none;
+}
+
+.linkCultura:hover {
+  text-decoration: underline;
+}
+
+/* Container principal da aplicação */
+.container {
+  min-height: 100vh;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+/* Utilitários globais */
+.containerFluid {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.sectionPadding {
+  padding: 4rem 0;
+}
+
+.textCenter {
+  text-align: center;
+}
+
+.sectionBadge {
+  display: inline-block;
+  padding: 0.5rem 1.5rem;
+  background: linear-gradient(135deg, #f4e4bc 0%, #e8c5a0 100%);
+  color: #2d3748;
+  border-radius: 1.5rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+}
+
+.sectionHeader {
+  text-align: center;
+  margin-bottom: 3rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.sectionHeader h2 {
+  font-size: 2.25rem;
+  margin-bottom: 1.5rem;
+  color: #2d3748;
+}
+
+.sectionHeader p {
+  font-size: 1.125rem;
+  color: #4a5568;
+}
+
+/* Botões reutilizáveis */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem 2rem;
+  border-radius: 1rem;
+  font-weight: 500;
+  text-decoration: none;
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 1rem;
+  background: none;
+  outline: none;
+}
+
+.btnPrimary {
+  background: linear-gradient(135deg, #a8d8a8 0%, #7fb069 100%);
+  color: white;
+  box-shadow: 0 4px 6px rgba(168, 216, 168, 0.15);
+}
+
+.btnPrimary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(168, 216, 168, 0.2);
+}
+
+.btnSecondary {
+  background: white;
+  color: #a8d8a8;
+  border-color: #a8d8a8;
+}
+
+.btnSecondary:hover {
+  background: #a8d8a8;
+  color: white;
+}
+
+.btnOutline {
+  background: transparent;
+  color: #a8d8a8;
+  border-color: #a8d8a8;
+}
+
+.btnOutline:hover {
+  background: #a8d8a8;
+  color: white;
+}
+
+/* Estados de loading */
+.loading {
+  opacity: 0.7;
+  pointer-events: none;
+  position: relative;
+}
+
+.spinning {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Animações */
+.fadeInUp {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.float {
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-20px) rotate(180deg);
+  }
+}
+
+/* Responsividade */
+@media (max-width: 1024px) {
+  .sectionHeader h2 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .sectionPadding {
+    padding: 2rem 0;
+  }
+
+  .sectionHeader h2 {
+    font-size: 1.75rem;
+  }
+
+  .btn {
+    width: 100%;
+    max-width: 300px;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .containerFluid {
+    padding: 0 0.5rem;
+  }
+
+  .sectionHeader h2 {
+    font-size: 1.5rem;
+  }
+}

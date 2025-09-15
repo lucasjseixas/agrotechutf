@@ -1,0 +1,241 @@
+/* Services Section */
+.services {
+  padding: 4rem 0;
+  background: #f8f9fa;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.sectionHeader {
+  text-align: center;
+  margin-bottom: 3rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.sectionBadge {
+  display: inline-block;
+  padding: 0.5rem 1.5rem;
+  background: linear-gradient(135deg, #f4e4bc 0%, #e8c5a0 100%);
+  color: #2d3748;
+  border-radius: 1.5rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+}
+
+.sectionHeader h2 {
+  font-size: 2.25rem;
+  margin-bottom: 1.5rem;
+  color: #2d3748;
+}
+
+.sectionHeader p {
+  font-size: 1.125rem;
+  color: #4a5568;
+  margin-bottom: 0;
+}
+
+/* Recomendações de Cultivo */
+.cropRecommendations {
+  margin-bottom: 3rem;
+}
+
+.cropRecommendations h3 {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #a8d8a8;
+  font-size: 1.5rem;
+}
+
+.cropGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.cropCard {
+  background: white;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 1px 3px rgba(168, 216, 168, 0.12);
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.cropCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(168, 216, 168, 0.2);
+}
+
+.cropIcon {
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, #a8d8a8 0%, #7fb069 100%);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 1.5rem;
+  margin: 0 auto 1.5rem;
+}
+
+.cropCard h4 {
+  color: #a8d8a8;
+  margin-bottom: 1rem;
+  font-size: 1.25rem;
+}
+
+.cropCard p {
+  margin-bottom: 0.5rem;
+  font-size: 0.875rem;
+  color: #4a5568;
+}
+
+/* Grid de Serviços */
+.servicesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+}
+
+.serviceCard {
+  background: white;
+  padding: 2rem;
+  border-radius: 1.5rem;
+  box-shadow: 0 1px 3px rgba(168, 216, 168, 0.12);
+  transition: all 0.3s ease;
+  position: relative;
+  border: 2px solid transparent;
+}
+
+.serviceCard:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 25px rgba(168, 216, 168, 0.25);
+  border-color: #a8d8a8;
+}
+
+.serviceCard.featured {
+  border-color: #a8d8a8;
+  background: linear-gradient(
+    135deg,
+    rgba(168, 216, 168, 0.05) 0%,
+    rgba(127, 176, 105, 0.05) 100%
+  );
+}
+
+.serviceBadge {
+  position: absolute;
+  top: -10px;
+  right: 2rem;
+  background: linear-gradient(135deg, #a8d8a8 0%, #7fb069 100%);
+  color: white;
+  padding: 0.5rem 1.5rem;
+  border-radius: 1.5rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.serviceIcon {
+  width: 70px;
+  height: 70px;
+  background: linear-gradient(135deg, #a8d8a8 0%, #7fb069 100%);
+  border-radius: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.serviceCard h3 {
+  color: #2d3748;
+  margin-bottom: 1rem;
+  font-size: 1.25rem;
+}
+
+.serviceCard > p {
+  color: #4a5568;
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+.serviceCard ul {
+  list-style: none;
+  margin-bottom: 2rem;
+  padding: 0;
+}
+
+.serviceCard li {
+  padding: 0.5rem 0;
+  color: #718096;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.serviceCard li::before {
+  content: "✓";
+  color: #a8d8a8;
+  font-weight: bold;
+  width: 20px;
+}
+
+.serviceLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #a8d8a8;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.serviceLink:hover {
+  gap: 1rem;
+  color: #7fb069;
+}
+
+/* Responsividade */
+@media (max-width: 1024px) {
+  .sectionHeader h2 {
+    font-size: 2rem;
+  }
+
+  .servicesGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .cropGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .serviceCard {
+    padding: 1.5rem;
+  }
+
+  .sectionHeader h2 {
+    font-size: 1.75rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .serviceBadge {
+    right: 1rem;
+    font-size: 0.7rem;
+    padding: 0.4rem 1rem;
+  }
+}

@@ -1,0 +1,150 @@
+/* Reset e Configurações Base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* Cores Pastéis - Paleta de Agricultura */
+  --primary-color: #a8d8a8; /* Verde Sage Suave */
+  --secondary-color: #f4e4bc; /* Bege Creme */
+  --accent-color: #7fb069; /* Verde Folha */
+  --accent-2: #e8c5a0; /* Terracota Claro */
+  --accent-3: #b5c99a; /* Verde Oliva Claro */
+
+  /* Tons Neutros Pastéis */
+  --background: #fefefe;
+  --background-soft: #f8f9fa;
+  --text-primary: #2d3748;
+  --text-secondary: #4a5568;
+  --text-muted: #718096;
+  --border-light: #e2e8f0;
+  --white: #ffffff;
+
+  /* Gradientes Pastéis */
+  --gradient-primary: linear-gradient(135deg, #a8d8a8 0%, #7fb069 100%);
+  --gradient-soft: linear-gradient(135deg, #f4e4bc 0%, #e8c5a0 100%);
+  --gradient-hero: linear-gradient(
+    135deg,
+    rgba(168, 216, 168, 0.1) 0%,
+    rgba(127, 176, 105, 0.1) 100%
+  );
+
+  /* Shadows Suaves */
+  --shadow-sm: 0 1px 3px rgba(168, 216, 168, 0.12);
+  --shadow-md: 0 4px 6px rgba(168, 216, 168, 0.15);
+  --shadow-lg: 0 10px 25px rgba(168, 216, 168, 0.2);
+  --shadow-xl: 0 20px 25px rgba(168, 216, 168, 0.25);
+
+  /* Typography */
+  --font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-size-xs: 0.75rem;
+  --font-size-sm: 0.875rem;
+  --font-size-base: 1rem;
+  --font-size-lg: 1.125rem;
+  --font-size-xl: 1.25rem;
+  --font-size-2xl: 1.5rem;
+  --font-size-3xl: 1.875rem;
+  --font-size-4xl: 2.25rem;
+  --font-size-5xl: 3rem;
+
+  /* Spacing */
+  --spacing-xs: 0.25rem;
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 1.5rem;
+  --spacing-xl: 2rem;
+  --spacing-2xl: 3rem;
+  --spacing-3xl: 4rem;
+
+  /* Border Radius */
+  --radius-sm: 0.375rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 0.75rem;
+  --radius-xl: 1rem;
+  --radius-2xl: 1.5rem;
+
+  /* Transitions */
+  --transition-fast: 0.15s ease;
+  --transition-base: 0.3s ease;
+  --transition-slow: 0.5s ease;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-family);
+  font-size: var(--font-size-base);
+  line-height: 1.6;
+  color: var(--text-primary);
+  background: linear-gradient(135deg, #f4e4bc 0%, #ecd9c4 100%);
+  overflow-x: hidden;
+}
+
+/* Typography */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 600;
+  line-height: 1.2;
+  margin-bottom: var(--spacing-md);
+}
+
+h1 {
+  font-size: var(--font-size-5xl);
+}
+h2 {
+  font-size: var(--font-size-4xl);
+}
+h3 {
+  font-size: var(--font-size-3xl);
+}
+h4 {
+  font-size: var(--font-size-2xl);
+}
+h5 {
+  font-size: var(--font-size-xl);
+}
+h6 {
+  font-size: var(--font-size-lg);
+}
+
+p {
+  margin-bottom: var(--spacing-md);
+  color: var(--text-secondary);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: dark;
+  }
+}
+
+/* Responsividade global */
+@media (max-width: 768px) {
+  :root {
+    --font-size-5xl: 2.5rem;
+    --font-size-4xl: 2rem;
+    --font-size-3xl: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  :root {
+    --font-size-5xl: 2rem;
+    --font-size-4xl: 1.75rem;
+    --spacing-3xl: 2rem;
+  }
+}

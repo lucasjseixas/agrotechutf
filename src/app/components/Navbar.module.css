@@ -1,0 +1,126 @@
+/* Navbar */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid #e2e8f0;
+  z-index: 1000;
+  transition: all 0.3s ease;
+}
+
+.navContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 70px;
+}
+
+.navLogo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #a8d8a8;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.navLogo i {
+  font-size: 1.5rem;
+}
+
+.navMenu {
+  display: flex;
+  gap: 2rem;
+}
+
+/* .navLink {
+  padding: 0.5rem 1rem;
+  color: #2d3748;
+  text-decoration: none;
+  font-weight: 500;
+  border-radius: 0.5rem;
+  transition: all 0.3s ease;
+  position: relative;
+  cursor: pointer;
+} */
+
+.navLink {
+  padding: 0.5rem 1rem;
+  color: #2d3748;
+  text-decoration: none;
+  font-weight: 500;
+  border-radius: 0.5rem;
+  transition: all 0.3s ease;
+  position: relative;
+  cursor: pointer;
+  display: inline-flex; /* Use flexbox for better alignment control */
+  align-items: center; /* Vertically centers items within the flex container */
+  gap: 0.5rem; /* Adds space between icon and text */
+}
+
+.navLink:hover,
+.navLink.active {
+  color: #a8d8a8;
+  background-color: rgba(168, 216, 168, 0.1);
+}
+
+.navToggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 4px;
+}
+
+.bar {
+  width: 25px;
+  height: 3px;
+  background: #a8d8a8;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+/* Mobile Navigation */
+@media (max-width: 768px) {
+  .navMenu {
+    position: fixed;
+    top: 70px;
+    left: -100%;
+    width: 100%;
+    height: calc(100vh - 70px);
+    background: white;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 2rem;
+    transition: left 0.3s ease;
+    box-shadow: 0 10px 25px rgba(168, 216, 168, 0.2);
+  }
+
+  .navMenu.active {
+    left: 0;
+  }
+
+  .navToggle {
+    display: flex;
+  }
+
+  .navToggle.active .bar:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+
+  .navToggle.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .navToggle.active .bar:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -6px);
+  }
+}
