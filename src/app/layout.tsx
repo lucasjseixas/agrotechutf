@@ -2,9 +2,12 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Chamada API Agrofit",
+  title: "AGROTECH ~ UTFPR",
   description: "Interface para chamada API Agrofit da Embrapa",
   keywords: "agrofit, embrapa, api, agricultura, pragas, culturas",
+  icons: {
+    icon: "/logo2.ico",
+  },
 };
 
 export default function RootLayout({

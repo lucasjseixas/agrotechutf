@@ -147,7 +147,6 @@ export default function Profile() {
         </div>
       </div>
       <GeminiFloatingButton />
-
       <Footer />
     </div>
   );
