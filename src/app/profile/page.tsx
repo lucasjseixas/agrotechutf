@@ -6,6 +6,7 @@ import styles from "./page.module.css";
 import { jsPDF } from "jspdf";
 import Footer from "../components/Footer";
 import PopularSections from "../components/PopularSections";
+import GeminiFloatingButton from "../components/GeminiFloatingButton";
 
 export default function Profile() {
   const [name] = useState("João da Silva");
@@ -145,6 +146,7 @@ export default function Profile() {
           </form>
         </div>
       </div>
+      <GeminiFloatingButton />
 
       <Footer />
     </div>

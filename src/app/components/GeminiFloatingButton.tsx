@@ -342,6 +342,7 @@ const GeminiFloatingButton = () => {
         ) : (
           <>
             <MessageCircle className={styles.buttonIcon} />
+            <span className={styles.buttonText}>Pergunte a IA</span>
             <div className={styles.statusIndicator}></div>
           </>
         )}
