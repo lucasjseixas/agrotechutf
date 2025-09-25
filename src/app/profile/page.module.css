@@ -30,6 +30,11 @@
   animation: fadeInUp 0.8s ease-out forwards;
 }
 
+.popularWrapper {
+  margin-top: 1rem;
+  width: 100%; /* garante que ocupe toda a largura do card */
+}
+
 /* Textos */
 .textCenter {
   text-align: center;

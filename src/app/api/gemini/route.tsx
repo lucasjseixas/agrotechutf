@@ -1,16 +1,8 @@
-// /app/api/gemini/route.js (para App Router)
-// ou /pages/api/gemini.js (para Pages Router)
-
 import { GoogleGenAI } from "@google/genai";
 import { NextResponse } from "next/server";
 
-// Inicializa o Google Gen AI
-const ai = new GoogleGenAI({
-  // A chave da API será pega automaticamente da variável de ambiente GOOGLE_API_KEY
-  // ou você pode passar explicitamente: apiKey: process.env.GOOGLE_API_KEY
-});
+const ai = new GoogleGenAI({});
 
-// Para App Router (Next.js 13+)
 export async function POST(request: {
   json: () =>
     | PromiseLike<{ message: any; image: any; config?: {} | undefined }>

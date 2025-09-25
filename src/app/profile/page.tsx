@@ -5,6 +5,7 @@ import { useState } from "react";
 import styles from "./page.module.css";
 import { jsPDF } from "jspdf";
 import Footer from "../components/Footer";
+import PopularSections from "../components/PopularSections";
 
 export default function Profile() {
   const [name] = useState("João da Silva");
@@ -72,6 +73,7 @@ export default function Profile() {
               style={{ width: "100px", height: "auto" }}
             />
           </header>
+
           <div className={styles.textCenter}>
             <div className={styles.sectionBadge}>Perfil</div>
             <h2>Bem-vindo, {name}!</h2>
@@ -88,6 +90,9 @@ export default function Profile() {
             <p>
               <strong>Cargo:</strong> {role}
             </p>
+          </div>
+          <div className={styles.popularWrapper}>
+            <PopularSections />
           </div>
 
           {/* Formulário da Receita */}
@@ -140,6 +145,7 @@ export default function Profile() {
           </form>
         </div>
       </div>
+
       <Footer />
     </div>
   );
